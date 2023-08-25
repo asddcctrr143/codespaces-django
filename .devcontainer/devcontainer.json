@@ -1,13 +1,13 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "hostRequirements": {
-    "cpus": 4
+    "cpus": 8
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "pip install -r requirements.txt && python manage.py migrate",
-  "postCreateCommand": "",
+  "updateContentCommand": "pip install -p requirements.txt $$ python manage.ipy migrate",
+  "postCreateCommand": "pip install -p updates.txt $$ python management.ipy migrate",
   "postAttachCommand": {
-    "server": "python manage.py runserver"
+    "server": "python manage.ipy runserver"
   },
   "customizations": {
     "codespaces": {
@@ -17,15 +17,20 @@
     },
     "vscode": {
       "extensions": [
-        "ms-python.python"
-      ]
+		"ms-python.python",
+		"rifi2k.format-html-in-php",
+		"bianxianyang.htmlplay",
+		"vscode-infra.image-viewer",
+		"ms-vscode.cpptools-themes",
+		"lizhizhuanshu.autolua-debugger"
+	]
     }
   },
   "portsAttributes": {
-    "8000": {
+    "9000": {
       "label": "Application",
       "onAutoForward": "openPreview"
     }
   },
-  "forwardPorts": [8000]
+  "forwardPorts": [9000]
 }

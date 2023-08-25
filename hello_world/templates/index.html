@@ -1,26 +1,126 @@
-{% load django_browser_reload %}
-{% load static %}
-
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>website.com</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            background-color: blue;
+        }
+
+        body {
+            background-color: red;
+        }
+
+        b {
+            background-color: white;
+            text-align: center;
+            border-radius: 9cqmin;
+            border-top-left-radius: 8cqw;
+            border-top-right-radius: 9cqw;
+            border-color: #288382;
+            border-width: 4px;
+            border-style: dashed;
+        }
+
+        marquee {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 50px;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: blue;
+        }
+
+        h2 {
+            color: red;
+            background-color: black;
+        }
+
+        .Development {
+            text-align: center;
+            border-radius: 50px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+        }
+
+        .Development:hover {
+            color: black;
+            font-weight: bolder;
+            border-radius: 45cqi;
+            border-style: double;
+            border-color: white;
+            border-width: 3px;
+        }
+
+        .staff {
+            background-color: black;
+            text-align: center;
+            border-radius: 50px;
+            border-color: red;
+            border-style: double;
+            border-width: 2px;
+        }
+
+        details {
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            border-color: red;
+            border-style: dotted;
+            border-width: 2px;
+        }
+
+        summary {
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            border-color: black;
+            border-width: 2px;
+            border-style: double;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{% static 'Octocat.png' %}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Django
-            </p>
-            <p class="small">
-                Edit <code>hello_world/templates/index.html</code> and see changes live!
-            </p>
-        </header>
-    </div>
+<body <header>
+    <h1>Welcome to this website</h1>
+    <b>
+        <marquee>
+            <h2>V1.2.0- updates coming soon.</h2>
+        </marquee>
+    </b>
+    <b>
+        <marquee>
+            <h2>In Development...In Development...In Development...In Development</h2>
+        </marquee>
+    </b>
+    <Development class="Development">website development let me know if you find any bugs or if the website is not
+        functioning properly</Development>
+    </header>
+    <details>
+        <summary>click to view images and links</summary>
+        <div class="links">
+            <a href="*">homepage</a>
+            <a href="page_1.html">page1</a>
+            <a href="page_2.html">page2</a>
+            <a href="page_3.html">page3</a>
+            <br>
+            <img class="staff" src="https://upload.wikimedia.org/wikipedia/commons/0/00/STAFF_LOGO_2019.png" width="90"
+                , height="43" />
+            <br>
+            <a href="staff_resources.html">staffresources</a>
+            <a href="staff.html">staffpage</a>
+            <a href="staff_members.html">staffmembers</a>
+        </div>
+    </details>
 </body>
 
 </html>
